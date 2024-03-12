@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #141313; /* Light gray background (optional) */
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, 
+      rgba(255, 167, 209, 0.3), /* Light pink */
+      rgba(253, 216, 113, 0.3), /* Light yellow */
+      rgba(130, 224, 239, 0.3)  /* Light blue */
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, 
+      rgba(255, 167, 209, 0.3), /* Light pink */
+      rgba(253, 216, 113, 0.3), /* Light yellow */
+      rgba(130, 224, 239, 0.3)  /* Light blue */
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar a {
+  text-decoration: none;
+  color: #000; /* Black color */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease-in-out;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); /* Black shadow */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: sans-serif; /* Set a default font family (optional) */
+  background: inherit; /* Inherit background from the .gradient-custom class */
 }
