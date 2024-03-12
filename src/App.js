@@ -4,6 +4,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
 import CV from './components/cv/CV';
+import Workshop from './components/writing/Workshop';
+import PenPortrait from './components/penPortrait/PenPortrait';
 
 
 function App() {
@@ -41,7 +43,13 @@ function App() {
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/penportrait">Pen Portrait</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/workshop">Time to write!</a>
                 </li>
                 
             </ul>
@@ -63,8 +71,9 @@ function App() {
      
       <Routes>
       <Route path='/' element={<Home />} />
+      <Route path='/penportrait' element={<PenPortrait />} />
       <Route path='/cv' element={<CV />} />
-      
+      <Route path='/workshop' element={<Workshop/>} />
         </Routes>
 
 
