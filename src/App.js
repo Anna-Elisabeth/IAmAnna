@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import CV from './components/cv/CV';
 import Workshop from './components/writing/Workshop';
 import PenPortrait from './components/penPortrait/PenPortrait';
+import WorkshopManager from './components/writing/WorkshopManager';
 
 
 
@@ -55,6 +56,9 @@ function App() {
                 <li class="nav-item">
                     <a class="nav-link" href="/workshop">Time to write!</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/workshopmanager">Writing management!</a>
+                </li>
                 
             </ul>
             {/* <!-- Left links --> */}
@@ -78,6 +82,8 @@ function App() {
       <Route path='/penportrait' element={<PenPortrait />} />
       <Route path='/cv' element={<CV />} />
       <Route path='/workshop' element={<Workshop/>} />
+      <Route path='/workshopmanager' element={<WorkshopManager/>} />
+      
         </Routes>
 
 
