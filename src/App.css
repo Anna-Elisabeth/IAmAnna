@@ -1,3 +1,6 @@
+
+/* navbar colouring */
+
 .gradient-custom {
   /* fallback for old browsers */
   background: #141313; /* Light gray background (optional) */
@@ -25,9 +28,156 @@
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); /* Black shadow */
 }
 
-body {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  font-family: sans-serif; /* Set a default font family (optional) */
-  background: inherit; /* Inherit background from the .gradient-custom class */
+
+/* speech bubble */
+.box {
+  width: 800px;
+  margin: 0px auto 100px auto;
+  background: #54c2bc;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #0b0a0a;
+  font-family: arial;
+  position: relative;
 }
+
+.sb1:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  right: -19px;
+  top: 6px;
+}
+
+.sb2:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 6px;
+}
+
+.sb3:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: 19px;
+  bottom: -19px;
+}
+
+.sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  right: 19px;
+  bottom: -19px;
+}
+
+
+
+
+
+/* book */
+.book {
+  width: 250px;
+  height:300px;
+  background: #000;
+  margin-top: 50px;
+  margin-left: 250px;
+  perspective: 1000px;
+  color:#fff;
+
+}
+
+.cover  {
+  width: 210px;
+  height: 300px;
+  left:40px;
+  position: relative;
+  transform: rotateY(-20deg) ;
+  transform-style:preserve-3d;
+  transform-origin:left;
+  transition: all .6s;
+}
+
+.book:hover .cover {
+  transform: rotateY(-180deg) ;
+}
+
+figure {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility:hidden;
+  font-size:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.front  {
+  background: rgb(234, 159, 192);
+}
+
+.back  {
+  background: rgb(252, 247, 107);
+  transform: rotateY(180deg);
+}
+
+.content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size:22px;
+  left:5%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.speech-bubble {
+  font-family: sans-serif; /* Choose your preferred font */
+  padding: 20px;
+  border-radius: 5px;
+  width: fit-content; /* Adjust width as needed */
+  background-color: #fff; /* Set background color */
+  position: relative; /* Needed for the tail */
+  margin: 10px auto; /* Add some margin */
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: #fff transparent transparent transparent; /* Match bubble color */
+}
+
