@@ -1,8 +1,8 @@
 
 import {useNavigate} from "react-router";
-// import pens from "./components/pens.png"
-import pens from './pens.png';
-import notebookb from './notebookb.png';
+
+import Miller from './Miller.PNG';
+import './Bubble.css';
 
 
 function Home() {
@@ -10,19 +10,20 @@ function Home() {
     const navigate =useNavigate();
     return ( 
 
-        <div style={{ backgroundImage: `url(${notebookb})` }}>
+       
+			// <div style={{ backgroundImage: `url(${Miller})`, backgroundPosition: 'center top', backgroundSize: 'cover' }}>
+
+			<div className="background-image">
 
 <div class="box sb1">I am Anna! Prepare for chaos. Software Engineer with a twist! I bring creativity and a passion for user interfaces to every project. While I may have led my colleagues to a slightly unconventional team-bonding experience (cough, cult, cough), my well-rounded skills and love for all things arty ensure I can tackle any challenge with a unique perspective.</div>
-{/* <div class="box sb2">I'm speech bubble</div>
-<div class="box sb3">I'm speech bubble</div>
-<div class="box sb4">I'm speech bubble</div> */}
+
             
             
 
         
             
-
-            
+<br/>
+<br/>       
 
         
 <div className ="row">

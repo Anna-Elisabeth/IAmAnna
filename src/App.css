@@ -3,98 +3,54 @@
 
 .gradient-custom {
   /* fallback for old browsers */
-  background: #141313; /* Light gray background (optional) */
+  background: #141313;
 
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, 
-      rgba(255, 167, 209, 0.3), /* Light pink */
-      rgba(253, 216, 113, 0.3), /* Light yellow */
-      rgba(130, 224, 239, 0.3)  /* Light blue */
+  #ececec, 
+  #9fd3c7,
+  #385170,
+  #142d4c  
   );
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, 
-      rgba(255, 167, 209, 0.3), /* Light pink */
-      rgba(253, 216, 113, 0.3), /* Light yellow */
-      rgba(130, 224, 239, 0.3)  /* Light blue */
+  #ececec, 
+  #9fd3c7, 
+  #385170,
+  #142d4c  
   );
 }
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed; /* Set navbar position to fixed */
+  top: 0; /* Position navbar at the top of the viewport */
+  width: 100%; /* Make the navbar full-width */
+  z-index: 3; /* Set a higher z-index to ensure it appears on top of the background */
+}
+
 
 .navbar a {
   text-decoration: none;
   color: #000; /* Black color */
   font-weight: bold; /* Make the text bold */
-  transition: color 0.3s ease-in-out;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); /* Black shadow */
+  padding: 10px 20px; /* Adjust padding for button size */
+  border: 2px solid #000; /* Black border */
+  background-color: #fff; /* White background */
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 5px; /* Add margin between buttons */
 }
 
 
-/* speech bubble */
-.box {
-  width: 800px;
-  margin: 0px auto 100px auto;
-  background: #54c2bc;
-  padding: 20px;
-  text-align: center;
-  font-weight: 900;
-  color: #0b0a0a;
-  font-family: arial;
-  position: relative;
+
+.navbar a:hover {
+  color: #fff; /* Change text color on hover */
+  background-color: #000; /* Change background color on hover */
 }
-
-.sb1:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid #00bfb6;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #00bfb6;
-  border-bottom: 10px solid transparent;
-  right: -19px;
-  top: 6px;
-}
-
-.sb2:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #00bfb6;
-  border-top: 10px solid #00bfb6;
-  border-bottom: 10px solid transparent;
-  left: -19px;
-  top: 6px;
-}
-
-.sb3:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid #00bfb6;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #00bfb6;
-  border-bottom: 10px solid transparent;
-  left: 19px;
-  bottom: -19px;
-}
-
-.sb4:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #00bfb6;
-  border-top: 10px solid #00bfb6;
-  border-bottom: 10px solid transparent;
-  right: 19px;
-  bottom: -19px;
-}
-
-
 
 
 
@@ -106,7 +62,7 @@
   margin-top: 50px;
   margin-left: 250px;
   perspective: 1000px;
-  color:#fff;
+  color:#fffdfd;
 
 }
 
@@ -138,11 +94,11 @@ figure {
 }
 
 .front  {
-  background: rgb(234, 159, 192);
+  background:   #142d4c ;
 }
 
 .back  {
-  background: rgb(252, 247, 107);
+  background: #9fd3c7;
   transform: rotateY(180deg);
 }
 
@@ -157,27 +113,4 @@ figure {
   justify-content:center;
 }
 
-
-.speech-bubble {
-  font-family: sans-serif; /* Choose your preferred font */
-  padding: 20px;
-  border-radius: 5px;
-  width: fit-content; /* Adjust width as needed */
-  background-color: #fff; /* Set background color */
-  position: relative; /* Needed for the tail */
-  margin: 10px auto; /* Add some margin */
-}
-
-.speech-bubble:after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 0 0;
-  border-color: #fff transparent transparent transparent; /* Match bubble color */
-}
 
