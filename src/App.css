@@ -1,5 +1,5 @@
 
-/* navbar colouring */
+/* navbar */
 
 .gradient-custom {
   /* fallback for old browsers */
@@ -10,6 +10,7 @@
   #ececec, 
   #9fd3c7,
   #385170,
+  #3a3a3a,
   #142d4c  
   );
 
@@ -18,9 +19,11 @@
   #ececec, 
   #9fd3c7, 
   #385170,
+  #3a3a3a,
   #142d4c  
   );
 }
+
 
 
 
@@ -32,7 +35,6 @@
   width: 100%; /* Make the navbar full-width */
   z-index: 3; /* Set a higher z-index to ensure it appears on top of the background */
 }
-
 
 .navbar a {
   text-decoration: none;
@@ -46,7 +48,6 @@
 }
 
 
-
 .navbar a:hover {
   color: #fff; /* Change text color on hover */
   background-color: #000; /* Change background color on hover */
@@ -58,7 +59,7 @@
 .book {
   width: 250px;
   height:300px;
-  background: #000;
+  background:  #3a3a3a;
   margin-top: 50px;
   margin-left: 250px;
   perspective: 1000px;

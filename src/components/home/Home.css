@@ -71,7 +71,7 @@
 
 
 
-.background-image {
+/* .background-image {
     background-image: url('./Miller.PNG');
     position: fixed;
 top: 0;
@@ -82,12 +82,21 @@ height: 100%;
 
 background-size: cover;
 
-}
-
-
-
-
-/* body {
-    margin: 0;
-    padding: 0;
 } */
+
+.background-image {
+  background-image: url('./Miller.PNG');
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/* failed attempt to set background colour to remove white strip */
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: #385170; 
+} */
+
+
