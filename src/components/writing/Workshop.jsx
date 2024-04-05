@@ -3,11 +3,12 @@ import PromptGenerator from "./PromptGenerator";
 import PromptGenerator2 from "./PromptGenerator2";
 import PromptGenerator3 from "./PromptGenerator3";
 import Timers from "../writing/Timers/Timers";
+import CreateStory from "../writing/Story/CreateStory";
 
 function Workshop() {
     return ( 
 
-        <div style={{ backgroundColor: "#d2eee7" }}>
+        <div style={{ backgroundColor: "#d2eee7", width: "100%", height: "100vh" }}>
 
 <h1>Can you make this story come true?</h1>
 
@@ -20,6 +21,7 @@ function Workshop() {
 <PromptGenerator2/>
 <PromptGenerator3/>
 <Timers/>
+<CreateStory/>
 
 
         </div>
