@@ -37,9 +37,31 @@ function CreateStory() {
     <div>
       <div className="container-fluid">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="ChallengeStory">Story:</label>
-          <input type="text" id="story" {...register("story", { required: true })} />  
-          <button type="submit">Create Story</button>
+          <label htmlFor="ChallengeStory"
+          style={{ marginLeft: "50px", marginTop: "50px", width: "300px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center",  fontSize: "30px", }} >
+            Create Your Story:</label>
+          <input 
+          style={{ 
+            border: "3px solid #213047", // Thick border with color #213047
+            borderRadius: "5px", 
+            padding: "10px", 
+            fontFamily: "Verdana, sans-serif", // Verdana font
+            fontWeight: "bold", // Bold text
+            marginLeft: "20px",
+            backgroundColor: "white" // White background color
+        }} 
+          type="text" id="story" {...register("story", { required: true })} />  
+          <button type="submit"
+          style={{ 
+            border: "3px solid #213047", // Thick border with color #213047
+            borderRadius: "5px", 
+            padding: "10px", 
+            fontFamily: "Verdana, sans-serif", // Verdana font
+            fontWeight: "bold", // Bold text
+            marginLeft: "20px",
+            backgroundColor: "white" // White background color
+        }} 
+          >Create Story</button>
         </form>
         <div className="row">{challengeArray}</div>
       </div>

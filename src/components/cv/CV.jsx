@@ -12,7 +12,8 @@ function CV() {
             <title>CV</title>
         </head> */}
         {/* <body> */}
-        <div className={styles.container}>
+        <div className={styles.cvPage}>
+        <div className={styles.container}> 
 
             <div className={styles.top}>
                 <div className={styles.imgBx}>
@@ -139,7 +140,7 @@ function CV() {
                         <li>
                             <span className={styles.text}>Spanish</span>
                             <span className={styles.percent}>
-                                <div style={{ width: '90%' }}></div>
+                                <div style={{ width: '100%' }}></div>
                             </span>
                         </li>
                         <li>
@@ -222,6 +223,7 @@ function CV() {
                     </div>
                     </div>
             </div>
+        </div>
         </div>
 
         {/* </body> */}

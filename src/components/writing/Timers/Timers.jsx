@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './timers.module.css';
+import CreateStory from "../Story/CreateStory";
 
 function Timers() {
     const [isAnimating, setIsAnimating] = useState(false);
@@ -24,10 +25,32 @@ function Timers() {
 
     return (
         <div>
-            <h1>Time...to Write</h1>
-            <h2>One Minute Challenge</h2>
+            <div className={styles.timerPage}>
+       
+            
 
-            <button
+            <h1 aria-label="writing time" className="border border-dark p-2 mb-2 border-4 border-dark rounded" style={{ marginLeft: "50px", marginTop: "50px", width: "900px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center" }} >Time...to Write</h1>
+            <br />
+            <h2 aria-label="one minute challenge" className="border border-dark p-2 mb-2 border-4 border-dark rounded" style={{ marginLeft: "50px", marginTop: "50px", width: "900px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center" }} >One Minute Challenge</h2>
+            <br />
+
+
+            <button 
+    style={{ 
+        border: "3px solid #213047", // Thick border with color #213047
+        borderRadius: "5px", 
+        padding: "10px", 
+        fontFamily: "Verdana, sans-serif", // Verdana font
+        fontWeight: "bold", // Bold text
+        marginLeft: "20px",
+        backgroundColor: "white" // White background color 
+    }}
+   
+
+
+   
+
+            
                 className={styles.startButton}
                 onClick={() => {
                     if (!isAnimating) {
@@ -44,9 +67,31 @@ function Timers() {
             <div
                  className={`${styles.hourglass} ${isAnimating ? styles.animate : styles.paused}`}
             ></div>
-            {timeLeft === 0 && <p>Time's up! Alarm sound here if possible</p>}
+            {timeLeft === 0 && <p style={{ marginLeft: "50px", marginTop: "50px", width: "900px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center" }}
+            
+            
+            
+            >Time's up! Alarm sound here if possible</p>}
 
-            <p>Time Left: {timeLeft} seconds</p>
+            <p style={{
+            
+            
+            
+        border: "3px solid #213047", // Thick border with color #213047
+        borderRadius: "5px", 
+        padding: "10px", 
+        fontFamily: "Verdana, sans-serif", // Verdana font
+        fontWeight: "bold", // Bold text
+        marginLeft: "20px",
+        backgroundColor: "white" // White background color
+    }} 
+   
+            
+            
+            
+            >Time Left: {timeLeft} seconds</p>
+            <CreateStory/>
+        </div>
         </div>
     );
 };

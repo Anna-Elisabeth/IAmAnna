@@ -3,17 +3,17 @@ import axios from "axios";
 import PersonProps from "./PersonProps";
 
 const cardStyle = {
-
   maxWidth: "200px",
   padding: "20px",
-  border: "20px solid #ddd",
+  border: "20px solid #1D2E4A",
   borderRadius: "5px",
   margin: "10px auto",
-  backgroundColor: "black",
-  color: "white"
+  backgroundColor: "white",
+  color: "black",
+  fontWeight: "bold",
+  fontFamily: "Verdana, sans-serif",
+  fontSize: "30px"
 };
-
-
 
 
 function PromptGenerator3() {
@@ -48,10 +48,20 @@ function PromptGenerator3() {
     <div>
       
       
-      <button style={{ border: "2px solid #ddd", borderRadius: "5px", padding: "10px", borderColor: "darkblue", marginLeft: "20px" }} onClick={handleClick}>
-        Get Random Character
-        
-      </button>
+      <button 
+    style={{ 
+        border: "3px solid #213047", // Thick border with color #213047
+        borderRadius: "5px", 
+        padding: "10px", 
+        fontFamily: "Verdana, sans-serif", // Verdana font
+        fontWeight: "bold", // Bold text
+        marginLeft: "20px",
+        backgroundColor: "white" // White background color
+    }} 
+    onClick={handleClick}
+>
+    Get Random Character
+</button>
       {randomPerson ? (
         <div style={cardStyle}>
           <PersonProps key={randomPerson.characterName} characterName={randomPerson.characterName} />
