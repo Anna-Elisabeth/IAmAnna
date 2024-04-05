@@ -289,8 +289,12 @@ p {
     height: 100%;
     background: #3590d2;
 }
+
 .newBox {
-    border: 5px solid #ccc; /* Adjust as needed */
-    padding: 10px; /* Adjust as needed */
-    margin-bottom: 10px; /* Adjust as needed */
+    border: 5px solid #ccc;
+    /* Adjust as needed */
+    padding: 10px;
+    /* Adjust as needed */
+    margin-bottom: 10px;
+    /* Adjust as needed */
 }

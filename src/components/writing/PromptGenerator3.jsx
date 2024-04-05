@@ -47,7 +47,11 @@ function PromptGenerator3() {
   return (
     <div>
       
-      <button onClick={handleClick}>Get Random Character</button>
+      
+      <button style={{ border: "2px solid #ddd", borderRadius: "5px", padding: "10px", borderColor: "darkblue", marginLeft: "20px" }} onClick={handleClick}>
+        Get Random Character
+        
+      </button>
       {randomPerson ? (
         <div style={cardStyle}>
           <PersonProps key={randomPerson.characterName} characterName={randomPerson.characterName} />
