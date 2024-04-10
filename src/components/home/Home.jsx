@@ -13,9 +13,23 @@ function Home() {
        
 			// <div style={{ backgroundImage: `url(${Miller})`, backgroundPosition: 'center top', backgroundSize: 'cover' }}>
 
-			<div className="background-image">
+			<div className="background-image"
+			style={{
+			
+				top: 0,
+				left: 0,
+				width: "100%",
+				height: "1800px",
+				background: "linear-gradient(to right, #ececec, #9fd3c7)",
+				border: "1px solid #d2eee7"
+			}}
 
-<div class="box sb1">I am Anna! Prepare for chaos. Software Engineer with a twist! I bring creativity and a passion for user interfaces to every project. While I may have led my colleagues to a slightly unconventional team-bonding experience (cough, cult, cough), my well-rounded skills and love for all things arty ensure I can tackle any challenge with a unique perspective.</div>
+
+			
+			
+			>
+
+<div className="box sb1">I am Anna! Prepare for chaos. Software Engineer with a twist! I bring creativity and a passion for user interfaces to every project. While I may have led my colleagues to a slightly unconventional team-bonding experience (cough, cult, cough), my well-rounded skills and love for all things arty ensure I can tackle any challenge with a unique perspective.</div>
 
             
             
@@ -28,7 +42,7 @@ function Home() {
         
 <div className ="row">
         <div className ="col">
-	 <div class="book" id="visit_return_button" onClick={() => navigate("/penportrait")}>
+	 <div className="book" id="visit_return_button" onClick={() => navigate("/penportrait")}>
     
 		<div class="content"> 
 			<h3>Pen Portrait</h3>

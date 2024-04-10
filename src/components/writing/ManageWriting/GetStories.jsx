@@ -17,6 +17,7 @@ function GetStories() {
     return (
         <div>
             {challenges.map(challenge => (
+                
                 <div key={challenge.id} style={{
                     fontWeight: "bold",
                     color: "white",

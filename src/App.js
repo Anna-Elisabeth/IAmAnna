@@ -8,6 +8,7 @@ import Workshop from './components/writing/Workshop';
 import PenPortrait from './components/penPortrait/PenPortrait';
 import WorkshopManager from './components/writing/WorkshopManager';
 import myLogo from "./myLogo.jpg";
+import Projects from './components/projects/Projects';
 
 
 
@@ -86,6 +87,7 @@ function App() {
       <Route path='/cv' element={<CV />} />
       <Route path='/workshop' element={<Workshop/>} />
       <Route path='/workshopmanager' element={<WorkshopManager/>} />
+      <Route path='/projects' element={<Projects/>} />
       
         </Routes>
 

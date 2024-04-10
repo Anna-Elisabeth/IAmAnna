@@ -7,7 +7,7 @@ function Workshop() {
             style={{
                 backgroundColor: "#d2eee7",
                 width: "100%",
-                height: "100vh",
+                height: "1800px",
                 border: "1px solid white" // Add thin white border
             }}
         >
