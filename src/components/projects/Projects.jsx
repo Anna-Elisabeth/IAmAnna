@@ -71,6 +71,7 @@ function Projects() {
                 <h2>PROJECT Anna</h2>
                 <img src={Anna} alt="Project Image" />
                 <p>Project description goes here...</p>
+                <button  onClick={() => navigate("/anna")}> click to read more</button>
             </div>
 
 

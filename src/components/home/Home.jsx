@@ -45,10 +45,10 @@ function Home() {
 	 <div className="book" id="visit_return_button" onClick={() => navigate("/penportrait")}>
     
 		<div class="content"> 
-			<h3>Pen Portrait</h3>
+			<h3>...Portrait</h3>
 		</div>
 		<div class="cover"> 
-			<figure class="front"> <h1>About me</h1> </figure>
+			<figure class="front"> <h1>Pen...</h1> </figure>
 			<figure class="back"></figure>
 		</div>
 	</div>
@@ -60,10 +60,10 @@ function Home() {
     <div className ="col">
 	 <div class="book" onClick={() => navigate("/cv")}>
 		<div class="content"> 
-			<h3>Lush CV</h3>
+			<h3>Fabulous <br/> CV</h3>
 		</div>
 		<div class="cover"> 
-			<figure class="front"> <h1>About me</h1> </figure>
+			<figure class="front"> <h1>More About Me</h1> </figure>
 			<figure class="back"></figure>
 		</div>
 	</div>
@@ -71,49 +71,28 @@ function Home() {
 
 
     <div className ="col">
-    <div class="book" onClick={() => navigate("/jalal")}>
+    <div class="book" onClick={() => navigate("/projects")}>
 		<div class="content"> 
-			<h3>JALAL</h3>
+			<h3>Check<br/> this out</h3>
 		</div>
 		<div class="cover"> 
-			<figure class="front"> <h1>Project Front-end</h1> </figure>
+			<figure class="front"> <h1>Projects</h1> </figure>
 			<figure class="back"></figure>
 		</div>
 	</div>
     </div>
 
-    <div className ="col">
-    <div class="book" onClick={() => navigate("/cana")}>
-		<div class="content"> 
-			<h3>CANA</h3>
-		</div>
-		<div class="cover"> 
-			<figure class="front"> <h1>Project Integrate</h1> </figure>
-			<figure class="back"></figure>
-		</div>
-	</div>
-    </div>
-
-    <div className ="col">
-     <div class="book" onClick={() => navigate("/thornlessroses")}>
-		<div class="content"> 
-			<h3>Thornless Roses</h3>
-		</div>
-		<div class="cover"> 
-			<figure class="front"> <h1>Project Testing</h1> </figure>
-			<figure className="back"></figure>
-		</div>
-	</div>
-    </div>
+    
+   
 
 
     <div className ="col">
 	 <div class="book" onClick={() => navigate("/cv")}>
 		<div class="content"> 
-			<h3>Write</h3>
+			<h3>Time<br/> to Write</h3>
 		</div>
 		<div class="cover"> 
-			<figure class="front"> <h1>Let's create</h1> </figure>
+			<figure class="front"> <h1>Let's Create</h1> </figure>
 			<figure class="back"></figure>
 		</div>
 	</div>
