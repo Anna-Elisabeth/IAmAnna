@@ -47,7 +47,11 @@ function PromptGenerator2() {
   return (
     <div>
       
-      <button onClick={handleClick}>Get Random Situation</button>
+     
+      <button style={{ border: "2px solid #ddd", borderRadius: "5px", padding: "10px", borderColor: "darkblue", marginLeft: "20px" }} onClick={handleClick}>
+        Get Random Situation
+        
+      </button>
       {randomSituation ? (
         <div style={cardStyle}>
           <SituationProps key={randomSituation.scenario} scenario={randomSituation.scenario} />

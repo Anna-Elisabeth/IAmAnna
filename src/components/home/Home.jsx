@@ -2,7 +2,7 @@
 import {useNavigate} from "react-router";
 
 import Miller from './Miller.PNG';
-import './Bubble.css';
+import './Home.css';
 
 
 function Home() {

@@ -46,8 +46,10 @@ function PromptGenerator() {
 
   return (
     <div>
-      
-      <button onClick={handleClick}>Get Random Setting</button>
+      <button style={{ border: "2px solid #ddd", borderRadius: "5px", padding: "10px", borderColor: "darkblue", marginLeft: "20px" }} onClick={handleClick}>
+        Get Random Setting
+        
+      </button>
       {randomSetting ? (
         <div style={cardStyle}>
           <SettingProps key={randomSetting.location} location={randomSetting.location} />

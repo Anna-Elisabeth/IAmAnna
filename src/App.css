@@ -1,5 +1,5 @@
 
-/* navbar colouring */
+/* navbar */
 
 .gradient-custom {
   /* fallback for old browsers */
@@ -10,6 +10,7 @@
   #ececec, 
   #9fd3c7,
   #385170,
+  #3a3a3a,
   #142d4c  
   );
 
@@ -18,9 +19,12 @@
   #ececec, 
   #9fd3c7, 
   #385170,
+  #3a3a3a,
   #142d4c  
+  
   );
 }
+
 
 
 
@@ -32,7 +36,6 @@
   width: 100%; /* Make the navbar full-width */
   z-index: 3; /* Set a higher z-index to ensure it appears on top of the background */
 }
-
 
 .navbar a {
   text-decoration: none;
@@ -46,71 +49,8 @@
 }
 
 
-
 .navbar a:hover {
   color: #fff; /* Change text color on hover */
   background-color: #000; /* Change background color on hover */
 }
-
-
-
-/* book */
-.book {
-  width: 250px;
-  height:300px;
-  background: #000;
-  margin-top: 50px;
-  margin-left: 250px;
-  perspective: 1000px;
-  color:#fffdfd;
-
-}
-
-.cover  {
-  width: 210px;
-  height: 300px;
-  left:40px;
-  position: relative;
-  transform: rotateY(-20deg) ;
-  transform-style:preserve-3d;
-  transform-origin:left;
-  transition: all .6s;
-}
-
-.book:hover .cover {
-  transform: rotateY(-180deg) ;
-}
-
-figure {
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility:hidden;
-  font-size:32px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.front  {
-  background:   #142d4c ;
-}
-
-.back  {
-  background: #9fd3c7;
-  transform: rotateY(180deg);
-}
-
-.content {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  font-size:22px;
-  left:5%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
 
