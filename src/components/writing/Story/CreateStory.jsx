@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import SettingProps from "./SettingProps";
+import ChallengeProps from "./ChallengeProps";
 import { useForm } from "react-hook-form"; // Assuming you use React Hook Form
 
-function CreateSetting() {
+function CreateStory() {
     const { register, handleSubmit, reset } = useForm(); 
 
-  const [settings, setSettings] = useState([]);
+  const [challenge, setChallenge] = useState([]);
 
-  // Fetch existing settings (optional)
+  // Fetch existing persons (optional)
   useEffect(() => {
-    // Your logic to fetch existing settings (if needed)
+    // Your logic to fetch existing persons (if needed)
   }, []);
 
   const resetForm = () => {
@@ -18,28 +18,30 @@ function CreateSetting() {
   };
 
   const onSubmit = async (data) => {
+
+    console.log(data);
     try {
-      const response = await axios.post("http://localhost:8081/setting/create", data);
-      console.log("Setting created successfully:", response.data);
+      const response = await axios.post("http://localhost:8081/challenge/create", data);
+      console.log("Story created successfully:", response.data);
       resetForm();
     } catch (err) {
-      console.error("Error creating setting:", err);
+      console.error("Error creating story", err);
     }
   };
 
-  const settingsArray = settings.map((setting) => (
-    <SettingProps key={setting.location} location={setting.location} />
+  const challengeArray = challenge.map((challenge) => (
+    <ChallengeProps key={challenge.challengeStory} challengeStory={challenge.challengeStory} />
   ));
 
   return (
     <div>
       <div className="container-fluid">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="location"
-             style={{ marginLeft: "50px", marginTop: "50px", width: "300px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center",  fontSize: "30px", }}
-          >Location:</label>
+          <label htmlFor="ChallengeStory"
+          style={{ marginLeft: "50px", marginTop: "50px", width: "300px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center",  fontSize: "30px", }} >
+            Create Your Story:</label>
           <input 
-           style={{ 
+          style={{ 
             border: "3px solid #213047", // Thick border with color #213047
             borderRadius: "5px", 
             padding: "10px", 
@@ -48,8 +50,9 @@ function CreateSetting() {
             marginLeft: "20px",
             backgroundColor: "white" // White background color
         }} 
-          type="text" id="location" {...register("location", { required: true })} />
-          <button  style={{ 
+          type="text" id="story" {...register("story", { required: true })} />  
+          <button type="submit"
+          style={{ 
             border: "3px solid #213047", // Thick border with color #213047
             borderRadius: "5px", 
             padding: "10px", 
@@ -58,13 +61,12 @@ function CreateSetting() {
             marginLeft: "20px",
             backgroundColor: "white" // White background color
         }} 
-          
-          type="submit">Create Location</button>
+          >Create Story</button>
         </form>
-        <div className="row">{settingsArray}</div>
+        <div className="row">{challengeArray}</div>
       </div>
     </div>
   );
 }
 
-export default CreateSetting;
+export default CreateStory;

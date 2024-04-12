@@ -8,7 +8,15 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+/* body {
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+.cvPage{
     background: #f9f9f9;
     display: flex;
     justify-content: center;

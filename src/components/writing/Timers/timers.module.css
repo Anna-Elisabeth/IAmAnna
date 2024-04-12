@@ -1,17 +1,8 @@
 
+/* the below is a problem as it puts styling off in other parts of appgit - fixed with .timerPage class instead of using root  */
+/* https://codepen.io/jkantner/pen/wvWXyKG */
 
-/* * {
-	border: 0;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-} */
-/* :root {
-	--bg: #e3e4e8;
-	--fg: #2e3138;
-	--primary: #255ff4;
-	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
-} */
+
 /* body {
 	background: var(--bg);
 	display: grid;
@@ -19,6 +10,18 @@
 	height: 100vh;
 	place-items: center;
 } */
+
+.timerPage{
+	--bg:  #C5DDD7;
+	--fg: #2e3138;
+	--primary: #255ff4;
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+	background: var(--bg);
+	display: grid;
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	place-items: center;
+}
 
 .hourglass, .hourglass:before, .hourglass:after {
 	animation-duration: 4s;

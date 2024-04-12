@@ -1,0 +1,51 @@
+.container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34800px;
+    background: linear-gradient(to right, #ececec, #9fd3c7);
+    border: 1px solid #d2eee7;
+}
+
+
+.projectCard {
+    border: 4px solid #000; /* Thicker border */
+    background-color: #EBECEC; /* Background color */
+    padding: 20px; /* Add some padding to the content */
+    width: calc(33.33% - 40px); /* Set width to 1/3 of the container width */
+    margin: 20px; /* Add some margin between cards */
+    float: left; /* Float the cards to make them align in rows */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.projectCard h2 {
+    font-family: Verdana, sans-serif; /* Set font family */
+    font-size: 35px; /* Adjust heading size */
+    font-weight: bold; /* Make project title bolder */
+    margin-bottom: 10px; /* Add space below heading */
+}
+
+.projectCard img {
+    width: 70%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the image a block element */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+.projectCard p {
+    font-family: Verdana, sans-serif; /* Set font family */
+    font-size: 24px; /* Adjust paragraph font size */
+    line-height: 1.5; /* Add some line spacing */
+}
+
+@media (max-width: 768px) {
+    .projectCard {
+        width: calc(50% - 40px); /* Set width to 1/2 of the container width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projectCard {
+        width: calc(100% - 40px); /* Set width to full container width for even smaller screens */
+    }
+}
