@@ -9,9 +9,12 @@ import PenPortrait from './components/penPortrait/PenPortrait';
 import WorkshopManager from './components/writing/WorkshopManager';
 import myLogo from "./myLogo.jpg";
 import Projects from './components/projects/Projects';
-
-
-
+import JalalProject from './components/projects/specificProjects/JalalProject';
+import CanaProject from './components/projects/specificProjects/CanaProject';
+import RoseProject from './components/projects/specificProjects/RoseProject';
+import MegaProject from './components/projects/specificProjects/MegaProject';
+import DolphinityProject from './components/projects/specificProjects/DolphinityProject';
+import ProjectAnna from './components/projects/specificProjects/ProjectAnna';
 
 function App() {
   return (
@@ -88,6 +91,15 @@ function App() {
       <Route path='/workshop' element={<Workshop/>} />
       <Route path='/workshopmanager' element={<WorkshopManager/>} />
       <Route path='/projects' element={<Projects/>} />
+      <Route path='/jalal' element={<JalalProject/>} />
+      <Route path='/cana' element={<CanaProject/>} />
+      <Route path='/rose' element={<RoseProject/>} />
+      <Route path='/mega' element={<MegaProject/>} />
+      <Route path='/dolphinity' element={<DolphinityProject/>} />
+      <Route path='/anna' element={<ProjectAnna/>} />
+      
+      
+     
       
         </Routes>
 

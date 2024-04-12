@@ -1,0 +1,70 @@
+
+
+.backgroundStyle {
+   
+    top: 0;
+    left: 0;
+    width: 100%; /* Use percentage for width */
+    height: 1500px; /* Set height to 1800px */
+    background: linear-gradient(to right, #ececec, #9fd3c7); /* Apply linear gradient */
+    border: 1px solid #d2eee7; /* Add border */
+}
+
+
+
+.enlarged-img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Increase the width to make the image larger */
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line if necessary */
+}
+
+.imageContainer {
+    flex: 1;
+    /* Take up 50% of the available space */
+    padding: 10px;
+    /* Add some padding for spacing */
+}
+
+.imageContainer img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.accordionContainer {
+    flex: 1;
+    /* Take up 50% of the available space */
+    padding: 10px;
+    /* Add some padding for spacing */
+
+}
+
+/* Styling for accordion headers */
+.accordion-header {
+    
+    color: #385170;
+   
+    background-color: #0c0c0c; /* Add some shading */
+    border-bottom: 5px solid #385170; /* Bold border */
+    padding: 15px;
+}
+
+ .headerStyle {
+    font-size: 40px !important;
+    font-weight: bold !important;
+    font-family: Verdana, sans-serif;
+}
+/* Styling for accordion bodies */
+.accordion-body {
+    font-family: Verdana, sans-serif;
+    font-size: 26px; /* Adjust font size */
+    padding: 10px;
+}

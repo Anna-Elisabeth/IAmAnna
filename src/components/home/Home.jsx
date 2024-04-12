@@ -1,9 +1,9 @@
 
 import {useNavigate} from "react-router";
 
-import Miller from './Miller.PNG';
-import './Home.css';
 
+import './Home.css';
+import AnnaHome from "./AnnaHome.png";
 
 function Home() {
 
@@ -23,18 +23,21 @@ function Home() {
 				background: "linear-gradient(to right, #ececec, #9fd3c7)",
 				border: "1px solid #d2eee7"
 			}}
-
-
-			
-			
 			>
 
-<div className="box sb1">I am Anna! Prepare for chaos. Software Engineer with a twist! I bring creativity and a passion for user interfaces to every project. While I may have led my colleagues to a slightly unconventional team-bonding experience (cough, cult, cough), my well-rounded skills and love for all things arty ensure I can tackle any challenge with a unique perspective.</div>
+<div className="container">
+  <div className="row">
+    <div className="box col">
+      <div className="sb1">Hello there! <br/>
+        I'm Anna – an aspiring software engineer, creative writer, performer, and ponderous thinker. <br/>Welcome to my corner of the web!
+      </div>
+    </div>
+    <div className="oval-container col">
+      <img src={AnnaHome} alt="Anna Home Image" className="image" />
+    </div>
+  </div>
+</div>
 
-            
-            
-
-        
             
 <br/>
 <br/>       
