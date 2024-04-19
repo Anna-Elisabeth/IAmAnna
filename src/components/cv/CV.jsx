@@ -62,31 +62,37 @@ function CV() {
             <li>
                 <h4>CSS</h4>
                 <span className={styles.percent}>
-                    <div style={{ width: '95%' }}></div>
+                    <div style={{ width: '75%' }}></div>
                 </span>
             </li>
             <li>
                 <h4>JavaScript</h4>
                 <span className={styles.percent}>
-                    <div style={{ width: '95%' }}></div>
+                    <div style={{ width: '70%' }}></div>
+                </span>
+            </li>
+            <li>
+                <h4>React</h4>
+                <span className={styles.percent}>
+                    <div style={{ width: '80%' }}></div>
                 </span>
             </li>
             <li>
                 <h4>Java</h4>
                 <span className={styles.percent}>
-                    <div style={{ width: '95%' }}></div>
+                    <div style={{ width: '55%' }}></div>
                 </span>
             </li>
             <li>
                 <h4>Spring Boot</h4>
                 <span className={styles.percent}>
-                    <div style={{ width: '95%' }}></div>
+                    <div style={{ width: '60%' }}></div>
                 </span>
             </li>
             <li>
                 <h4>SQL</h4>
                 <span className={styles.percent}>
-                    <div style={{ width: '95%' }}></div>
+                    <div style={{ width: '70%' }}></div>
                 </span>
             </li>
         </ul>
@@ -103,13 +109,19 @@ function CV() {
                         <li>
                             <span className={styles.text}>Problem-solving</span>
                             <span className={styles.percent}>
-                                <div style={{ width: '50%' }}></div>
+                                <div style={{ width: '89%' }}></div>
                             </span>
                         </li>
                         <li>
-                            <span className={styles.text}>Being Awesome</span>
+                            <span className={styles.text}>Attention to detail</span>
                             <span className={styles.percent}>
-                                <div style={{ width: '70%' }}></div>
+                                <div style={{ width: '80%' }}></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span className={styles.text}>Curiosity</span>
+                            <span className={styles.percent}>
+                                <div style={{ width: '89%' }}></div>
                             </span>
                         </li>
                     </ul>
@@ -170,9 +182,7 @@ function CV() {
                 <div className={styles.rightSide}>
     <div className={styles.profile}>
         <h3>Profile</h3>
-        <p>"Hey there, potential software wrangler! While my experience might be as elusive as a bug in a haystack, my enthusiasm for all things coding knows no bounds.
-            I may not have built the next Facebook or cracked the code to the Matrix (yet), but what I lack in experience,
-            I make up for in sheer determination and a willingness to Google everything."
+        <p>Aspiring software engineer with a passion for creative problem-solving. Thrives in collaborative environments and is also proactive in seeking out independent development opportunities. Eager to learn from experienced engineers and to contribute fresh ideas to innovative software solutions.
             <br /> </p>
     </div>
 
