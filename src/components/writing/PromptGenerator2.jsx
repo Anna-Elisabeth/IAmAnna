@@ -3,16 +3,17 @@ import axios from "axios";
 import SituationProps from "./SituationProps";
 
 const cardStyle = {
-  maxWidth: "200px",
+  maxWidth: "500px",
   padding: "20px",
   border: "20px solid #1D2E4A",
   borderRadius: "5px",
   margin: "10px auto",
   backgroundColor: "white",
   color: "black",
-  fontWeight: "bold",
+  
   fontFamily: "Verdana, sans-serif",
-  fontSize: "30px"
+  fontSize: "30px",
+ 
 };
 
 

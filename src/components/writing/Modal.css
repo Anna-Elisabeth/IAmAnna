@@ -48,20 +48,27 @@ img {
   width: 100%;
 }
 
+.modalMessage {
+  font-size: 20px;
+  font-family: "Verdana, sans-serif";
+  font-weight: bold;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+
+}
+
+
+
 .closeBtn {
   position: fixed;
   top: 8px;
   right: 8px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-top: 3rem;
-  padding: 1rem 2rem;
-}
+
 
 .btnContainer {
   display: flex;
@@ -72,7 +79,7 @@ img {
 }
 
 .btnContainer button {
-  width: 500%;
+  width: 700%;
   margin: 0.5rem;
   padding: 16px 0;
 
@@ -97,7 +104,7 @@ img {
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 500px) {

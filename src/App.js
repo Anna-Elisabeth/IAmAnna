@@ -46,7 +46,7 @@ function App() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {/* <!-- Navbar brand --> */}
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
-    <img src={AnnaNewLogo} alt="Logo" height="100" width="100" />
+    <img src={AnnaNewLogo} alt="Logo" height="80%" width="80%" />
 </a>
             {/* <!-- Left links --> */}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">

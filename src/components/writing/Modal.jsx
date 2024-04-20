@@ -18,9 +18,10 @@ const Modal = ({ open, onClose, message }) => {
           <p className='closeBtn' onClick={onClose}>
             X
           </p>
-          <div className='content' style={{ fontSize: "20px", fontFamily: "Verdana, sans-serif", fontWeight: "bold" }}
+          <div 
           >
-            <p>{message}</p>
+         
+            <p className='modalMessage'  >{message}</p>
             <div className='btnContainer'>
               <button className='btnPrimary' onClick={onClose}>
                 <span className='bold'>Continue</span>

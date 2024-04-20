@@ -90,7 +90,7 @@ function Home() {
 
 
     <div className ="col">
-	 <div class="book" onClick={() => navigate("/cv")}>
+	 <div class="book" onClick={() => navigate("/workshop")}>
 		<div class="content"> 
 			<h3>Time<br/> to Write</h3>
 		</div>
