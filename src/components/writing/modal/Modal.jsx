@@ -1,6 +1,7 @@
 
 import './Modal.css';
-import AnnaNewLogo from "../../AnnaNewLogo.png"; // Adjusted import statement
+import AnnaNewLogo from './AnnaNewLogo.png';
+
 
 const Modal = ({ open, onClose, message }) => {
   if (!open) return null;

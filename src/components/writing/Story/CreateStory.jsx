@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ChallengeProps from "./ChallengeProps";
 import { useForm } from "react-hook-form"; 
-import Modal from "../Modal";
+import Modal from "../modal/Modal";
 
 function CreateStory() {
     const { register, handleSubmit, reset } = useForm(); 
@@ -31,10 +31,7 @@ function CreateStory() {
     }
   };
 
-   // Fetch existing stories(optional)
-   useEffect(() => {
-    // Your logic to fetch existing stories(if needed)
-  }, []);
+   
 
   const handleModalClose = () => {
     setShowModal(false);

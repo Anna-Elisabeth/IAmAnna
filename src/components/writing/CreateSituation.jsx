@@ -1,26 +1,22 @@
-
-
 import { useEffect, useState } from "react";
 import axios from "axios";
-import SituationProps from "./SituationProps";
+import SituationProps from "./promptProps/SituationProps";
 import { useForm } from "react-hook-form";
-import Modal from "./Modal";
+import Modal from "./modal/Modal";
+
 
 function CreateSituation() {
   const { register, handleSubmit, reset } = useForm();
-
   const [situations, setSituations] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [showSituations, setShowSituations] = useState(true);
+  
+  
 
   const resetForm = () => {
     reset();
   };
-
-
-
-
-
 
   const onSubmit = async (data) => {
     try {
@@ -38,12 +34,27 @@ function CreateSituation() {
 
 
   useEffect(() => {
-    // Your logic to fetch existing situation (if needed)
+
+    const fetchSituations = async () => {
+      try {
+        const response = await axios.get("http://localhost:8081/situation/get");
+        setSituations(response.data);
+      } catch (error) {
+        console.error("Error fetching scenarios", error);
+      }
+    };
+    fetchSituations();
+
+
   }, []);
+
+
+
+
 
   const handleModalClose = () => {
     setShowModal(false);
-};
+  };
 
   const situationsArray = situations.map((situation) => (
     <SituationProps key={situation.scenario} scenario={situation.scenario} />
@@ -71,26 +82,45 @@ function CreateSituation() {
             type="text" id="scenario" {...register("scenario", { required: true })} />
           <button
             style={{
-              border: "3px solid #213047", 
+              border: "3px solid #213047",
               borderRadius: "5px",
               padding: "10px",
-              fontFamily: "Verdana, sans-serif", 
-              fontWeight: "bold", 
+              fontFamily: "Verdana, sans-serif",
+              fontWeight: "bold",
               marginLeft: "20px",
-              backgroundColor: "white" 
+              backgroundColor: "white"
             }} type="submit">Create Scenario</button>
-               {showModal && (
-                        <Modal
-                            open={showModal}
-                            onClose={handleModalClose}
-                            message={modalMessage}
-                        />
-                    )}
+          {showModal && (
+            <Modal
+              open={showModal}
+              onClose={handleModalClose}
+              message={modalMessage}
+            />
+          )}
         </form>
-        <div className="row">{situationsArray}</div>
+        <button
+        style={{
+          border: "3px solid #213047", // Thick border with color #213047
+          borderRadius: "5px",
+          padding: "10px",
+          fontFamily: "Verdana, sans-serif", // Verdana font
+          fontWeight: "bold", // Bold text
+          marginLeft: "20px",
+          backgroundColor: "white" // White background color
+        }}
+        onClick={() => setShowSituations(!showSituations)}>
+          {showSituations ? "Hide Scenarios" : "Show Scenarios"}
+        </button>
+
+        {showSituations && <div className="row">{situationsArray}</div>}
+
+
+
+
       </div>
     </div>
   );
 }
 
 export default CreateSituation;
+

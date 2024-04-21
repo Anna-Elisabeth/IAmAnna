@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import SettingProps from "./SettingProps";
+import SettingProps from "./promptProps/SettingProps";
 import { useForm } from "react-hook-form";
-import Modal from "./Modal";
+import Modal from "./modal/Modal";
+
 
 function CreateSetting() {
   const { register, handleSubmit, reset } = useForm();
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const [settings, setSettings] = useState([]);
-
   const [showSettings, setShowSettings] = useState(true);
 
   const resetForm = () => {
@@ -22,7 +22,7 @@ function CreateSetting() {
       const response = await axios.post("http://localhost:8081/setting/create", data);
       console.log("Location created successfully:", response.data);
       setModalMessage("Location created!");
-            setShowModal(true);
+      setShowModal(true);
       resetForm();
     } catch (err) {
       console.error("Error creating location", err);
@@ -31,23 +31,23 @@ function CreateSetting() {
     }
   };
 
-    // Fetch existing settings 
-    useEffect(() => {
-      
-const fetchSettings = async () => {
-  try {
-    const response = await axios.get("http://localhost:8081/setting/get");
-    setSettings(response.data);
-  } catch (error) {
-    console.error("Error fetching settings", error);
-  }
-};
-fetchSettings();
+  // Fetch existing settings 
+  useEffect(() => {
 
-    }, []);
-  
-    const handleModalClose = () => {
-      setShowModal(false);
+    const fetchSettings = async () => {
+      try {
+        const response = await axios.get("http://localhost:8081/setting/get");
+        setSettings(response.data);
+      } catch (error) {
+        console.error("Error fetching settings", error);
+      }
+    };
+    fetchSettings();
+
+  }, []);
+
+  const handleModalClose = () => {
+    setShowModal(false);
   };
 
   const settingsArray = settings.map((setting) => (
@@ -63,7 +63,7 @@ fetchSettings();
           >Location:</label>
           <input
             style={{
-              border: "3px solid #213047", 
+              border: "3px solid #213047",
               borderRadius: "5px",
               padding: "10px",
               fontFamily: "Verdana, sans-serif", // Verdana font
@@ -83,17 +83,28 @@ fetchSettings();
           }}
 
             type="submit">Create Location</button>
-              {showModal && (
-                        <Modal
-                            open={showModal}
-                            onClose={handleModalClose}
-                            message={modalMessage}
-                        />
-                    )}
+          {showModal && (
+            <Modal
+              open={showModal}
+              onClose={handleModalClose}
+              message={modalMessage}
+            />
+          )}
         </form>
 
-        <button onClick={() => setShowSettings(!showSettings)}>
-          Show/Hide Settings
+        <button
+        style={{
+          border: "3px solid #213047", // Thick border with color #213047
+          borderRadius: "5px",
+          padding: "10px",
+          fontFamily: "Verdana, sans-serif", // Verdana font
+          fontWeight: "bold", // Bold text
+          marginLeft: "20px",
+          backgroundColor: "white" // White background color
+        }}
+        
+        onClick={() => setShowSettings(!showSettings)}>
+          {showSettings ? "Hide Locations" : "Show Locations"}
         </button>
         {showSettings && <div className="row">{settingsArray}</div>}
       </div>

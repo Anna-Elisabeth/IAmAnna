@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SettingProps from "./SettingProps";
+import SettingProps from "./promptProps/SettingProps";
+
+
+
 
 const cardStyle = {
   maxWidth: "500px",

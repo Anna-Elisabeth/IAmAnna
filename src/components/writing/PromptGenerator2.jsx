@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SituationProps from "./SituationProps";
+import SituationProps from "./promptProps/SituationProps";
+
+
 
 const cardStyle = {
   maxWidth: "500px",
