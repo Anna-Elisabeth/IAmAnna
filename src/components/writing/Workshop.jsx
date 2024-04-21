@@ -1,4 +1,6 @@
 import Timers from "../writing/Timers/Timers";
+import Timers2 from "../writing/Timers/Timers2";
+import Timers3 from "../writing/Timers/Timers3";
 import Prompt from "./Prompt";
 
 function Workshop() {
@@ -33,8 +35,18 @@ function Workshop() {
             <br />
 
             <Prompt />
+            <br/>
+
+            <Timers2 />
+
+            <br/>
 
             <Timers />
+
+            <br/>
+
+            <Timers3 />
+
         </div>
     );
 }
