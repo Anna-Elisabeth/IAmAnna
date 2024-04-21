@@ -27,6 +27,12 @@ function CreateSituation() {
       setModalMessage("Scenario created!");
       setShowModal(true);
       resetForm();
+
+      setSituations(prevSituations => [...prevSituations, response.data]);
+      
+
+
+
     } catch (err) {
       console.error("Error creating scenario", err);
       setModalMessage("Error, scenario not created.");

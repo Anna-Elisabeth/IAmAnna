@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import Modal from "./modal/Modal";
 
 function CreatePerson() {
-    const { register, handleSubmit, reset } = useForm(); 
+    const { register, handleSubmit, reset } = useForm();
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
     const [person, setPersons] = useState([]);
@@ -25,6 +25,9 @@ function CreatePerson() {
             setModalMessage("Character created!");
             setShowModal(true);
             resetForm();
+
+            setPersons(prevPersons => [...prevPersons, response.data]);
+
         } catch (err) {
             console.error("Error creating Character", err);
             setModalMessage("Error, character not created.");
@@ -95,31 +98,69 @@ function CreatePerson() {
     };
 
     const personArray = person.map((person) => (
-        <PersonProps 
-        key={person.characterName} 
-        characterName={person.characterName} 
-        onEdit={() => handleEdit(person.id, person.characterName)}
-        onDelete={() => handleDelete(person.id)}
-    /> ));
+        <PersonProps
+            key={person.characterName}
+            characterName={person.characterName}
+            onEdit={() => handleEdit(person.id, person.characterName)}
+            onDelete={() => handleDelete(person.id)}
+        />));
 
     return (
         <div>
             <div className="container-fluid">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                <label
-            style={{ marginLeft: "50px", marginTop: "50px", width: "300px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center", fontSize: "30px", }}
- htmlFor="characterName">Character:</label>
-                    <input  style={{
-              border: "3px solid #213047", // Thick border with color #213047
-              borderRadius: "5px",
-              padding: "10px",
-              fontFamily: "Verdana, sans-serif", // Verdana font
-              fontWeight: "bold", // Bold text
-              marginLeft: "20px",
-              backgroundColor: "white" // White background color
-            }}
-            type="text" id="characterName" {...register("characterName", { required: true })} />
+                    <label
+                        style={{ marginLeft: "50px", marginTop: "50px", width: "300px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047", textAlign: "center", fontSize: "30px", }}
+                        htmlFor="characterName">Character:</label>
+                    <input style={{
+                        border: "3px solid #213047", // Thick border with color #213047
+                        borderRadius: "5px",
+                        padding: "10px",
+                        fontFamily: "Verdana, sans-serif", // Verdana font
+                        fontWeight: "bold", // Bold text
+                        marginLeft: "20px",
+                        backgroundColor: "white" // White background color
+                    }}
+                        type="text" id="characterName" {...register("characterName", { required: true })} />
                     <button
+                        style={{
+                            border: "3px solid #213047", // Thick border with color #213047
+                            borderRadius: "5px",
+                            padding: "10px",
+                            fontFamily: "Verdana, sans-serif", // Verdana font
+                            fontWeight: "bold", // Bold text
+                            marginLeft: "20px",
+                            backgroundColor: "white" // White background color
+                        }}
+                        type="submit">Create Character</button>
+                    {showModal && (
+                        <Modal
+                            open={showModal}
+                            onClose={handleModalClose}
+                            message={modalMessage}
+                        />
+                    )}
+
+                </form>
+
+                {editing ? (
+                    <div>
+                        <input
+                            type="text"
+                            value={editCharacterName}
+                            onChange={e => setEditCharacterName(e.target.value)}
+                        />
+                        <button onClick={handleSave}>Save</button>
+                    </div>
+                ) : null}
+
+                {showModal && (
+                    <Modal onClose={() => setShowModal(false)}>
+                        <h1>A new character was added</h1>
+                    </Modal>
+                )}
+
+                <button
                     style={{
                         border: "3px solid #213047", // Thick border with color #213047
                         borderRadius: "5px",
@@ -128,50 +169,12 @@ function CreatePerson() {
                         fontWeight: "bold", // Bold text
                         marginLeft: "20px",
                         backgroundColor: "white" // White background color
-                      }}
-                       type="submit">Create Character</button>
-                    {showModal && (
-                        <Modal
-                            open={showModal}
-                            onClose={handleModalClose}
-                            message={modalMessage}
-                        />
-                    )}
-                   
-                </form>
+                    }}
 
-                {editing ? (
-            <div>
-                <input 
-                    type="text" 
-                    value={editCharacterName} 
-                    onChange={e => setEditCharacterName(e.target.value)} 
-                />
-                <button onClick={handleSave}>Save</button>
-            </div>
-        ) : null}
-
-        {showModal && (
-            <Modal onClose={() => setShowModal(false)}>
-                <h1>A new character was added</h1>
-            </Modal>
-        )}
-
-                <button
-                style={{
-                    border: "3px solid #213047", // Thick border with color #213047
-                    borderRadius: "5px",
-                    padding: "10px",
-                    fontFamily: "Verdana, sans-serif", // Verdana font
-                    fontWeight: "bold", // Bold text
-                    marginLeft: "20px",
-                    backgroundColor: "white" // White background color
-                  }}
-                
-                onClick={() => setShowCharacters(!showCharacters)}>
-  {showCharacters ? "Hide Characters" : "Show Characters"}
-</button>
-{showCharacters && <div className="row">{personArray}</div>}
+                    onClick={() => setShowCharacters(!showCharacters)}>
+                    {showCharacters ? "Hide Characters" : "Show Characters"}
+                </button>
+                {showCharacters && <div className="row">{personArray}</div>}
             </div>
         </div>
     );
