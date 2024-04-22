@@ -68,10 +68,10 @@ function PromptGenerator2() {
 </button>
       {randomSituation ? (
         <div style={cardStyle}>
-          <SituationProps key={randomSituation.scenario} scenario={randomSituation.scenario} />
+          <SituationProps key={randomSituation.scenario} scenario={randomSituation.scenario}  showButtons={false}/>
         </div>
       ) : (
-        <p>Loading situations...</p>
+        <p>Go on...</p>
       )}
     </div>
   );

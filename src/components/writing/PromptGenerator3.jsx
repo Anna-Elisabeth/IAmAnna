@@ -66,10 +66,10 @@ function PromptGenerator3() {
 </button>
       {randomPerson ? (
         <div style={cardStyle}>
-          <PersonProps key={randomPerson.characterName} characterName={randomPerson.characterName} />
+          <PersonProps key={randomPerson.characterName} characterName={randomPerson.characterName} showButtons={false}/>
         </div>
       ) : (
-        <p>Loading characters...</p>
+        <p>You've got this...</p>
       )}
     </div>
   );

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 
 
-function PersonProps({ characterName, onEdit, onDelete }) {
+function PersonProps({ characterName, onEdit, onDelete, showButtons }) {
   return (
     <div style={{
       border: '1px solid #ccc', // Border
@@ -13,7 +13,10 @@ function PersonProps({ characterName, onEdit, onDelete }) {
       backgroundColor: '#f8f8f8', // Background color
     }}>
       <h3>{characterName}</h3>
-      <button   style={{
+      {showButtons && (
+          <>
+            <button 
+              style={{
                 backgroundColor: 'white',
                 color: 'black',
                 fontWeight: 'bold',
@@ -21,9 +24,14 @@ function PersonProps({ characterName, onEdit, onDelete }) {
                 marginLeft: '10px',
                 marginRight: '10px',
                 padding: '5px 10px', 
-                borderRadius: '5px', // Add rounded corners 
-              }} onClick={onEdit}>Edit</button>
-            <button   style={{
+                borderRadius: '5px',
+              }}
+              onClick={onEdit}
+            >
+              Edit
+            </button>
+            <button
+              style={{
                 backgroundColor: 'white',
                 color: 'black',
                 fontWeight: 'bold',
@@ -31,16 +39,20 @@ function PersonProps({ characterName, onEdit, onDelete }) {
                 marginLeft: '10px',
                 marginRight: '10px',
                 padding: '5px 10px', 
-                borderRadius: '5px', // Add rounded corners 
-              }} onClick={onDelete}>Delete</button>
-    </div>
-
-     
-  );
-}
+                borderRadius: '5px',
+              }}
+              onClick={onDelete}
+            >
+              Delete
+            </button>
+          </>
+        )}
+      </div>
+    );
+  }
 PersonProps.propTypes = {
   characterName: PropTypes.string.isRequired,
-
+  showButtons: PropTypes.bool,
 };
 
 export default PersonProps;

@@ -106,6 +106,9 @@ function CreateSetting() {
       location={setting.location}
       onEdit={() => handleEdit(setting.id, setting.location)}
       onDelete={() => handleDelete(setting.id)}
+
+       showButtons={true}
+
     />
   ));
 

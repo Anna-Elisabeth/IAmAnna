@@ -52,27 +52,27 @@ function PromptGenerator() {
 
   return (
     <div>
-    <button 
-    style={{ 
-        border: "3px solid #213047", // Thick border with color #213047
-        borderRadius: "5px", 
-        padding: "10px", 
-        fontFamily: "Verdana, sans-serif", // Verdana font
-        fontWeight: "bold", // Bold text
-        marginLeft: "20px",
-        backgroundColor: "white" // White background color
-        
-    }} 
-    onClick={handleClick}
->
-    Get Random Setting
-</button>
+      <button
+        style={{
+          border: "3px solid #213047", // Thick border with color #213047
+          borderRadius: "5px",
+          padding: "10px",
+          fontFamily: "Verdana, sans-serif", // Verdana font
+          fontWeight: "bold", // Bold text
+          marginLeft: "20px",
+          backgroundColor: "white" // White background color
+
+        }}
+        onClick={handleClick}
+      >
+        Get Random Setting
+      </button>
       {randomSetting ? (
         <div style={cardStyle}>
-          <SettingProps key={randomSetting.location} location={randomSetting.location} />
+          <SettingProps key={randomSetting.location} location={randomSetting.location} showButtons={false} />
         </div>
       ) : (
-        <p>Loading settings...</p>
+        <p>Please click me...</p>
       )}
     </div>
   );
