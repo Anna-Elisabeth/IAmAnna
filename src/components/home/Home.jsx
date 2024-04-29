@@ -11,7 +11,7 @@ function Home() {
     return ( 
 
        
-			// <div style={{ backgroundImage: `url(${Miller})`, backgroundPosition: 'center top', backgroundSize: 'cover' }}>
+		
 
 			<div className="background-image"
 			style={{
