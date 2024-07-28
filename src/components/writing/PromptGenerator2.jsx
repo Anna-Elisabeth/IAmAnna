@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SituationProps from "./SituationProps";
+import SituationProps from "./promptProps/SituationProps";
+
+
 
 const cardStyle = {
-  maxWidth: "200px",
+  maxWidth: "500px",
   padding: "20px",
   border: "20px solid #1D2E4A",
   borderRadius: "5px",
   margin: "10px auto",
   backgroundColor: "white",
   color: "black",
-  fontWeight: "bold",
+  
   fontFamily: "Verdana, sans-serif",
-  fontSize: "30px"
+  fontSize: "30px",
+ 
 };
 
 
@@ -65,10 +68,10 @@ function PromptGenerator2() {
 </button>
       {randomSituation ? (
         <div style={cardStyle}>
-          <SituationProps key={randomSituation.scenario} scenario={randomSituation.scenario} />
+          <SituationProps key={randomSituation.scenario} scenario={randomSituation.scenario}  showButtons={false}/>
         </div>
       ) : (
-        <p>Loading situations...</p>
+        <p>Go on...</p>
       )}
     </div>
   );

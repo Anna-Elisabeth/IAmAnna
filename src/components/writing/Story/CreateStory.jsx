@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ChallengeProps from "./ChallengeProps";
-import { useForm } from "react-hook-form"; // Assuming you use React Hook Form
+import { useForm } from "react-hook-form"; 
+import Modal from "../modal/Modal";
 
 function CreateStory() {
     const { register, handleSubmit, reset } = useForm(); 
-
+    const [showModal, setShowModal] = useState(false);
+    const [modalMessage, setModalMessage] = useState("");
   const [challenge, setChallenge] = useState([]);
 
-  // Fetch existing persons (optional)
-  useEffect(() => {
-    // Your logic to fetch existing persons (if needed)
-  }, []);
-
+ 
   const resetForm = () => {
     reset();
   };
@@ -23,11 +21,21 @@ function CreateStory() {
     try {
       const response = await axios.post("http://localhost:8081/challenge/create", data);
       console.log("Story created successfully:", response.data);
+      setModalMessage("Story created!");
+      setShowModal(true);
       resetForm();
     } catch (err) {
       console.error("Error creating story", err);
+      setModalMessage("Error, story not created.");
+            setShowModal(true);
     }
   };
+
+   
+
+  const handleModalClose = () => {
+    setShowModal(false);
+};
 
   const challengeArray = challenge.map((challenge) => (
     <ChallengeProps key={challenge.challengeStory} challengeStory={challenge.challengeStory} />
@@ -62,6 +70,13 @@ function CreateStory() {
             backgroundColor: "white" // White background color
         }} 
           >Create Story</button>
+           {showModal && (
+                        <Modal
+                            open={showModal}
+                            onClose={handleModalClose}
+                            message={modalMessage}
+                        />
+                    )}
         </form>
         <div className="row">{challengeArray}</div>
       </div>

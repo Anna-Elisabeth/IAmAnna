@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PersonProps from "./PersonProps";
+import PersonProps from "./promptProps/PersonProps";
 
 const cardStyle = {
-  maxWidth: "200px",
+  maxWidth: "500px",
   padding: "20px",
   border: "20px solid #1D2E4A",
   borderRadius: "5px",
   margin: "10px auto",
   backgroundColor: "white",
   color: "black",
-  fontWeight: "bold",
+ 
   fontFamily: "Verdana, sans-serif",
-  fontSize: "30px"
+  fontSize: "30px",
+  textAlign: "center"
 };
+
 
 
 function PromptGenerator3() {
@@ -64,10 +66,10 @@ function PromptGenerator3() {
 </button>
       {randomPerson ? (
         <div style={cardStyle}>
-          <PersonProps key={randomPerson.characterName} characterName={randomPerson.characterName} />
+          <PersonProps key={randomPerson.characterName} characterName={randomPerson.characterName} showButtons={false}/>
         </div>
       ) : (
-        <p>Loading characters...</p>
+        <p>You've got this...</p>
       )}
     </div>
   );
