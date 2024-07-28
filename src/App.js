@@ -7,7 +7,7 @@ import CV from './components/cv/CV';
 import Workshop from './components/writing/Workshop';
 import PenPortrait from './components/penPortrait/PenPortrait';
 import WorkshopManager from './components/writing/WorkshopManager';
-import myLogo from "./myLogo.jpg";
+import AnnaNewLogo from "./AnnaNewLogo.png";
 import Projects from './components/projects/Projects';
 import JalalProject from './components/projects/specificProjects/JalalProject';
 import CanaProject from './components/projects/specificProjects/CanaProject';
@@ -46,8 +46,7 @@ function App() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {/* <!-- Navbar brand --> */}
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
-    <img src={myLogo} alt='Logo' height='50' width='50'/>
-    
+    <img src={AnnaNewLogo} alt="Logo" height="80%" width="80%" />
 </a>
             {/* <!-- Left links --> */}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
