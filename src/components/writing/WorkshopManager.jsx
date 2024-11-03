@@ -26,7 +26,7 @@ function WorkshopManager() {
                     textAlign: "center", // Center align the text
                 }}
             >
-                Nice and Tidy!
+                Prompts and Stories!
             </h1>
             <br/>
             <h2 aria-label="prompt maker" className="border border-dark p-2 mb-2 border-4 border-dark rounded" style={{ marginLeft: "50px", marginTop: "50px", width: "900px", color: "white", fontFamily: "Verdana, sans-serif", backgroundColor: "#213047" }} >Let's make some new prompts:</h2>
