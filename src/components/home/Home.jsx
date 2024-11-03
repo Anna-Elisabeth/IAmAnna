@@ -29,7 +29,7 @@ function Home() {
   <div className="row">
     <div className="box col">
       <div className="sb1">Hello there! <br/>
-        I'm Anna – an aspiring software engineer, creative writer, performer, and ponderous thinker. <br/>Welcome to my corner of the web!
+        I'm Anna – a novice software engineer, creative writer, performer, and ponderous thinker. <br/>Welcome to my corner of the web!
       </div>
     </div>
     <div className="oval-container col">
